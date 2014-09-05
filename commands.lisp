@@ -49,4 +49,5 @@
   add-public-key-succeeded)
 
 (adt:defdata delete-public-key-response
-  delete-public-key-succeeded)
+  delete-public-key-succeeded
+  (no-such-public-key user-name))

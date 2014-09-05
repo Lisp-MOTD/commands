@@ -23,7 +23,3 @@
 (deftype delta-time ()
   "Time deltas must be in seconds."
   'real)
-
-(deftype public-key ()
-  "Public key must be represented as a list."
-  'list)

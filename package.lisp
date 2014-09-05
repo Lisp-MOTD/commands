@@ -72,5 +72,21 @@
   (:export :delete-public-key-response
            :delete-public-key-response-p
            :delete-public-key-succeeded
-           :delete-public-key-succeeded-p)
+           :delete-public-key-succeeded-p
+           :no-such-public-key
+           :no-such-public-key-p)
+  (:export :signature
+           :signature-p
+           :dsa-signature
+           :dsa-signature-p
+           :public-key
+           :public-key-p
+           :dsa-public-key
+           :dsa-public-key-p
+           :private-key
+           :private-key-p
+           :dsa-private-key
+           :dsa-private-key-p
+           :authenticated-message
+           :authenticated-message-p)
   (:export :eval-command))

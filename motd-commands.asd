@@ -10,7 +10,11 @@
                (:static-file "UNLICENSE")
                (:file "package")
                (:file "types" :depends-on ("package"))
+               (:file "authenticate" :depends-on ("package"
+                                                  "types"))
                (:file "commands" :depends-on ("package"
-                                              "types"))
+                                              "types"
+                                              "authenticate"))
                (:file "eval" :depends-on ("package"
+                                          "authenticate"
                                           "commands"))))
