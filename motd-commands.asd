@@ -11,4 +11,6 @@
                (:file "package")
                (:file "types" :depends-on ("package"))
                (:file "commands" :depends-on ("package"
-                                              "types"))))
+                                              "types"))
+               (:file "eval" :depends-on ("package"
+                                          "commands"))))

@@ -12,7 +12,7 @@
   "Text must be a string"
   'string)
 
-(deftype languages ()
+(deftype language ()
   "Languages must be keywords"
   'keyword)
 

@@ -1,6 +1,6 @@
 (in-package #:motd-commands)
 
-(adt:defdata motd-commands
+(adt:defdata motd-command
   new-motd
 
   (add-translation message-id language text)
@@ -18,37 +18,32 @@
 (adt:defdata motd-general-error
   (not-authorized user-name)
   (time-difference-too-great delta-time)
-  (authentication-failed user-name))
+  (authentication-failed user-name)
+  (no-such-message message-id))
 
 (adt:defdata new-motd-response
   (new-motd-succeeded message-id))
 
 (adt:defdata add-translation-response
   add-translation-succeeded
-  (add-translation-no-such-message message-id)
   (invalid-translation-language language))
 
 (adt:defdata delete-translation-response
   delete-translation-succeeded
-  (delete-translation-no-such-message message-id)
   (no-such-translation message-id language))
 
 (adt:defdata add-tag-response
-  add-tag-succeeded
-  (add-tag-no-such-message message-id))
+  add-tag-succeeded)
 
 (adt:defdata delete-tag-response
   delete-tag-succeeded
-  (delete-tag-no-such-message message-id)
   (no-such-tag message-id tag))
 
 (adt:defdata approve-motd-response
-  approve-motd-succeeded
-  (approve-motd-no-such-message message-id))
+  approve-motd-succeeded)
 
 (adt:defdata delete-motd-response
-  delete-motd-succeeded
-  (delete-motd-no-such-message message-id))
+  delete-motd-succeeded)
 
 (adt:defdata add-public-key-response
   add-public-key-succeeded)
