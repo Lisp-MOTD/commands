@@ -1,5 +1,11 @@
 ## Lisp Message of the Day (Common Lisp Admin Commands)
 
+### Caveat
+
+Note: this depends on a patch to Ironclad which has recently been
+merged into the Ironclad repository but has not yet gone into a
+Quicklisp release.
+
 ### Overview
 
 This package contains algebraic data types used to send commands
