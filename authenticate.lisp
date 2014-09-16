@@ -2,13 +2,19 @@
 
 (deftype dsa-signature-r () '(integer 1 *))
 (deftype dsa-signature-s () '(integer 1 *))
-(deftype payload () 'string)
+(deftype salt () '(integer 1 *))
+(deftype timestamp () '(integer 0 *))
+(deftype payload () 'motd-command)
+(deftype encoded-signed-message () 'string)
 
 (adt:defdata signature
   (dsa-signature dsa-signature-r dsa-signature-s))
 
+(adt:defdata signed-message-contents
+  (signed-message salt timestamp payload))
+
 (adt:defdata message
-  (authenticated-message user-name payload signature))
+  (authenticated-message user-name encoded-signed-message signature))
 
 (deftype dsa-key-p () '(integer 1 *))
 (deftype dsa-key-q () '(integer 1 *))

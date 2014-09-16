@@ -16,6 +16,7 @@
   (delete-public-key user))
 
 (adt:defdata motd-general-error
+  (decoding-error authenticated-message)
   (not-authorized user-name)
   (time-difference-too-great delta-time)
   (authentication-failed user-name)

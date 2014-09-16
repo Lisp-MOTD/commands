@@ -25,6 +25,8 @@
            :delete-public-key-p)
   (:export :motd-general-error
            :motd-general-error-p
+           :decoding-error
+           :decoding-error-p
            :not-authorized
            :not-authorized-p
            :time-difference-too-great
@@ -87,6 +89,10 @@
            :private-key-p
            :dsa-private-key
            :dsa-private-key-p
+           :signed-message-contents
+           :signed-message-contents-p
+           :signed-message
+           :signed-message-p
            :authenticated-message
            :authenticated-message-p)
   (:export :eval-command))
