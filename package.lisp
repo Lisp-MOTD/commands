@@ -41,6 +41,8 @@
            :new-motd-succeeded-p)
   (:export :add-translation-response
            :add-translation-response-p
+           :add-translation-succeeded
+           :add-translation-succeeded-p
            :invalid-translation-language
            :invalid-translation-language-p)
   (:export :delete-translation-response
