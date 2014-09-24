@@ -3,9 +3,11 @@
 (defun %ok-to-eval-p (list)
   (let ((first (first list)))
     (when (symbolp first)
-      (let ((sym (find-symbol (symbol-name first) "MOTD-COMMANDS")))
+      (multiple-value-bind (sym visibility)
+          (find-symbol (symbol-name first) "MOTD-COMMANDS")
         (and sym
              (eq (symbol-package sym) (symbol-package first))
+             (eq visibility :external)
              (adt:algebraic-data-type-p sym))))))
 
 (defun eval-command (cmd-list)
@@ -17,7 +19,7 @@
 
     ((and (symbolp cmd-list)
           (%ok-to-eval-p (list cmd-list)))
-     (funcall (symbol-function cmd-list)))
+     (eval (macroexpand cmd-list)))
 
     ((listp cmd-list)
      (mapcar #'eval-command cmd-list))
