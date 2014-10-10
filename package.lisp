@@ -13,6 +13,8 @@
            :new-motd-p
            :add-translation
            :add-translation-p
+           :delete-translation
+           :delete-translation-p
            :add-tag
            :add-tag-p
            :approve-motd
