@@ -17,6 +17,8 @@
            :delete-translation-p
            :add-tag
            :add-tag-p
+           :delete-tag
+           :delete-tag-p
            :approve-motd
            :approve-motd-p
            :delete-motd
