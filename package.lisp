@@ -8,97 +8,51 @@
            :delta-time
            :public-key)
   (:export :motd-command
-           :motd-command-p
            :new-motd
-           :new-motd-p
            :add-translation
-           :add-translation-p
            :delete-translation
-           :delete-translation-p
            :add-tag
-           :add-tag-p
            :delete-tag
-           :delete-tag-p
            :approve-motd
-           :approve-motd-p
            :delete-motd
-           :delete-motd-p
            :add-public-key
-           :add-public-key-p
-           :delete-public-key
-           :delete-public-key-p)
+           :delete-public-key)
   (:export :motd-general-error
            :motd-general-error-p
            :decoding-error
-           :decoding-error-p
            :not-authorized
-           :not-authorized-p
            :time-difference-too-great
-           :time-difference-too-great-p
            :authentication-failed
-           :authentication-failed-p
-           :no-such-message
-           :no-such-message-p)
+           :no-such-message)
   (:export :new-motd-response
-           :new-motd-response-p
-           :new-motd-succeeded
-           :new-motd-succeeded-p)
+           :new-motd-succeeded)
   (:export :add-translation-response
-           :add-translation-response-p
            :add-translation-succeeded
-           :add-translation-succeeded-p
-           :invalid-translation-language
-           :invalid-translation-language-p)
+           :invalid-translation-language)
   (:export :delete-translation-response
-           :delete-translation-response-p
            :delete-translation-succeeded
-           :delete-translation-succeeded-p
-           :no-such-translation
-           :no-such-translation-p)
+           :no-such-translation)
   (:export :add-tag-response
-           :add-tag-response-p
-           :add-tag-succeeded
-           :add-tag-succeeded-p)
+           :add-tag-succeeded)
   (:export :delete-tag-response
-           :delete-tag-response-p
            :delete-tag-succeeded
-           :delete-tag-succeeded-p
-           :no-such-tag
-           :no-such-tag-p)
+           :no-such-tag)
   (:export :approve-motd-response
-           :approve-motd-response-p
-           :approve-motd-succeeded
-           :approve-motd-succeeded-p)
+           :approve-motd-succeeded)
   (:export :delete-motd-response
-           :delete-motd-response-p
-           :delete-motd-succeeded
-           :delete-motd-succeeded-p)
+           :delete-motd-succeeded)
   (:export :add-public-key-response
-           :add-public-key-response-p
-           :add-public-key-succeeded
-           :add-public-key-succeeded-p)
+           :add-public-key-succeeded)
   (:export :delete-public-key-response
-           :delete-public-key-response-p
            :delete-public-key-succeeded
-           :delete-public-key-succeeded-p
-           :no-such-public-key
-           :no-such-public-key-p)
+           :no-such-public-key)
   (:export :signature
-           :signature-p
            :dsa-signature
-           :dsa-signature-p
            :public-key
-           :public-key-p
            :dsa-public-key
-           :dsa-public-key-p
            :private-key
-           :private-key-p
            :dsa-private-key
-           :dsa-private-key-p
            :signed-message-contents
-           :signed-message-contents-p
            :signed-message
-           :signed-message-p
-           :authenticated-message
-           :authenticated-message-p)
+           :authenticated-message)
   (:export :eval-command))

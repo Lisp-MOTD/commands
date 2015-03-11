@@ -22,6 +22,9 @@
   (authentication-failed user-name)
   (no-such-message message-id))
 
+(defun motd-general-error-p (item)
+  (typep item 'motd-general-error))
+
 (adt:defdata new-motd-response
   (new-motd-succeeded message-id))
 
